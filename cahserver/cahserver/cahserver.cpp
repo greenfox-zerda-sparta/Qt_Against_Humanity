@@ -1,9 +1,9 @@
-#include "cahserver.h"
+/*#include "cahserver.h"
 
 cahserver::cahserver(QObject *parent) : QObject(parent) {
   server = new QTcpServer(this);
   connect(server, SIGNAL(newConnection()), this, SLOT(newConnection()));
-
+	
   if (!server->listen(QHostAddress::Any, 1234)) {
     qDebug() << "Server could not start";
   } else {
@@ -19,3 +19,4 @@ void cahserver::newConnection() {
   socket->waitForBytesWritten(3000);
   socket->close();
 }
+*/

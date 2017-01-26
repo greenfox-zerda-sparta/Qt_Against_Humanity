@@ -1,3 +1,4 @@
+/*
 #ifndef CAHSERVER_H
 #define CAHSERVER_H
 
@@ -20,3 +21,4 @@ public:
 };
 
 #endif // CAHSERVER_H
+*/

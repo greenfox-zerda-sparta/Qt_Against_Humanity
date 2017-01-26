@@ -1,10 +1,13 @@
-#include "cahserver.h"
+//#include "cahserver.h"
 //#include <QtWidgets/QApplication>
+#include "myserver.h"
+
 #include <QCoreApplication>
 
 int main(int argc, char *argv[])
 {
 	QCoreApplication a(argc, argv);
-  cahserver myServer;
+	MyServer server;
+	server.StartServer();
 	return a.exec();
 }
