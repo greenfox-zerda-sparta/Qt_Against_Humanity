@@ -9,11 +9,12 @@ public:
 	GameLogic(QObject * parent = Q_NULLPTR);
   void selectQuestionCard();
   void initializeAnswerCards();
-  void run();
+  void run(int);
   void pickAnswer(int);
   void removeCardFromHand(int);
   void refillHand();
-	~GameLogic();
+  QString getQuestionCard();
+  QVector<QString> getAnswerCards();
 
 private:
   QVector<QString> _questions;
@@ -21,7 +22,4 @@ private:
   QString _activeQuestionCard;
   QVector<QString> _activeAnswerCards;
   QString _theAnswer;
-
-  QTextStream* _cout;
-  QTextStream* _cin;
 };
