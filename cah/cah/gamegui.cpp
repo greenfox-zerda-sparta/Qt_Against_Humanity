@@ -29,37 +29,37 @@ void GameGui::render()
 
   QPainter* painter_1 = new QPainter(&pix_1);
   painter_1->setPen(Qt::darkCyan);
-  painter_1->setFont(QFont("Times", 10, QFont::Bold));
+  painter_1->setFont(QFont("Times", 12, QFont::Bold));
   painter_1->drawText(QRect(10, 10, 101, 131), answers[0]);
   ui.label_pic_1->setPixmap(pix_1);
 
   QPainter* painter_2 = new QPainter(&pix_2);
   painter_2->setPen(Qt::darkCyan);
-  painter_2->setFont(QFont("Times", 10, QFont::Bold));
+  painter_2->setFont(QFont("Times", 12, QFont::Bold));
   painter_2->drawText(QRect(10, 10, 101, 131), answers[1]);
   ui.label_pic_2->setPixmap(pix_2);
 
   QPainter* painter_3 = new QPainter(&pix_3);
   painter_3->setPen(Qt::darkCyan);
-  painter_3->setFont(QFont("Times", 10, QFont::Bold));
+  painter_3->setFont(QFont("Times", 12, QFont::Bold));
   painter_3->drawText(QRect(10, 10, 101, 131), answers[2]);
   ui.label_pic_3->setPixmap(pix_3);
 
   QPainter* painter_4 = new QPainter(&pix_4);
   painter_4->setPen(Qt::darkCyan);
-  painter_4->setFont(QFont("Times", 10, QFont::Bold));
+  painter_4->setFont(QFont("Times", 12, QFont::Bold));
   painter_4->drawText(QRect(10, 10, 101, 131), answers[3]);
   ui.label_pic_4->setPixmap(pix_4);
 
   QPainter* painter_5 = new QPainter(&pix_5);
   painter_5->setPen(Qt::darkCyan);
-  painter_5->setFont(QFont("Times", 10, QFont::Bold));
+  painter_5->setFont(QFont("Times", 12, QFont::Bold));
   painter_5->drawText(QRect(10, 10, 101, 131), answers[4]);
   ui.label_pic_5->setPixmap(pix_5);
 
   QPainter* painter_6 = new QPainter(&pix_6);
   painter_6->setPen(Qt::darkCyan);
-  painter_6->setFont(QFont("Times", 10, QFont::Bold));
+  painter_6->setFont(QFont("Times", 12, QFont::Bold));
   painter_6->drawText(QRect(10, 10, 101, 131), answers[5]);
   ui.label_pic_6->setPixmap(pix_6);
 
@@ -69,7 +69,7 @@ void GameGui::render()
 
   QPainter* painter_7 = new QPainter(&blackPix);
   painter_7->setPen(Qt::white);
-  painter_7->setFont(QFont("Times", 10, QFont::Bold));
+  painter_7->setFont(QFont("Times", 12, QFont::Bold));
   painter_7->drawText(QRect(10, 10, 101, 131), question);
   ui.label_pic_black->setPixmap(blackPix);
 
