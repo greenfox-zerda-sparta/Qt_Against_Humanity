@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QtGui>
+#include <QLabel>
 #include "ui_gamegui.h"
 
 class GameGui : public QWidget
