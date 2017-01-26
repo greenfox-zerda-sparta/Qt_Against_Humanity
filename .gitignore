@@ -35,3 +35,7 @@ x64
 
 #vs
 .vs
+
+#Project
+*.vcxproj
+*.vcxproj.filters
