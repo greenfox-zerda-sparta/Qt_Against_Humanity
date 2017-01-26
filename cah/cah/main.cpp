@@ -1,4 +1,4 @@
-#include "cah.h"
+#include "gamegui.h"
 #include "gamelogic.h"
 #include <QtWidgets/QApplication>
 #include <iostream>
@@ -7,13 +7,10 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    cah w;
+    GameGui w;
     w.show();
-<<<<<<< HEAD
     Client client;
     std::cout << "kiscicák";
-=======
-    GameLogic gamelogic;
->>>>>>> master
+    //GameLogic gamelogic;
     return a.exec();
 }
