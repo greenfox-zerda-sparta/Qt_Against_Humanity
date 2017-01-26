@@ -1,12 +1,21 @@
 #include "cahserver.h"
 
-cahserver::cahserver(QWidget *parent)
-	: QMainWindow(parent)
-{
-	ui.setupUi(this);
+cahserver::cahserver(QObject *parent) : QObject(parent) {
+  server = new QTcpServer(this);
+  connect(server, SIGNAL(newConnection()), this, SLOT(newConnection()));
+
+  if (!server->listen(QHostAddress::Any, 1234)) {
+    qDebug() << "Server could not start";
+  } else {
+    qDebug() << "Server started...";
+  }
 }
 
-cahserver::~cahserver()
-{
+void cahserver::newConnection() {
+  QTcpSocket* socket = server->nextPendingConnection();
+  socket->write("hello client\r\n");
+  socket->flush();
 
+  socket->waitForBytesWritten(3000);
+  socket->close();
 }
