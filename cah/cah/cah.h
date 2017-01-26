@@ -2,6 +2,7 @@
 #define CAH_H
 
 #include <QtWidgets/QMainWindow>
+#include "gamegui.h"
 #include "ui_cah.h"
 
 class cah : public QMainWindow
