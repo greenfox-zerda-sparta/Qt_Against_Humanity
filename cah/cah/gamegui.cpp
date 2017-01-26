@@ -4,13 +4,10 @@ GameGui::GameGui(QWidget *parent)
     : QWidget(parent)
 {
   ui.setupUi(this);
-  QPixmap pix("white_card.png");
-  QLabel *label = new QLabel(this);
-  label->setFrameStyle(QFrame::Panel | QFrame::Sunken);
-  label->setAlignment(Qt::AlignBottom | Qt::AlignRight);
-  //label->setPixmap(pix);
+  this->setStyleSheet("background-color: darkCyan");
   //m_Cards << ui.card_1 << ui.card_2 << ui.card_3 << ui.card_3 << ui.card_4 << ui.card_5 << ui.card_6;
-  ui.card_1->setStyleSheet("background-image: ./white_card.png");
+
+  QPixmap pix("white_card.png");
   ui.label_pic_1->setPixmap(pix);
   ui.label_pic_2->setPixmap(pix);
   ui.label_pic_3->setPixmap(pix);

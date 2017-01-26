@@ -6,44 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>856</width>
-    <height>528</height>
+    <width>967</width>
+    <height>608</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>GameGui</string>
+   <string>Cards Against Humanity</string>
   </property>
-  <widget class="QWidget" name="question_card" native="true">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>40</y>
-     <width>131</width>
-     <height>161</height>
-    </rect>
-   </property>
-   <widget class="QLabel" name="label_pic_black">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>131</width>
-      <height>161</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-  </widget>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(166, 255, 214);</string>
+  </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>480</y>
+     <x>420</x>
+     <y>560</y>
      <width>121</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Submit your chosen card(s)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 170, 170);
+color: rgb(255, 255, 255);
+background-color: rgb(152, 200, 197);</string>
    </property>
    <property name="text">
     <string>SUBMIT</string>
@@ -53,167 +41,118 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>260</y>
-     <width>781</width>
-     <height>161</height>
+     <y>510</y>
+     <width>951</width>
+     <height>51</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="4">
-     <widget class="QWidget" name="card_5" native="true">
-      <widget class="QLabel" name="label_pic_5">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>121</width>
-         <height>160</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QWidget" name="card_2" native="true">
-      <widget class="QLabel" name="label_pic_2">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>121</width>
-         <height>160</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QWidget" name="card_3" native="true">
-      <widget class="QLabel" name="label_pic_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>121</width>
-         <height>160</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <zorder>label_pic_3</zorder>
-      <zorder>card_4</zorder>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QWidget" name="card_1" native="true">
-      <widget class="QLabel" name="label_pic_1">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>121</width>
-         <height>160</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="0" column="5">
-     <widget class="QWidget" name="card_6" native="true">
-      <widget class="QLabel" name="label_pic_6">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>121</width>
-         <height>160</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="0" column="3">
-     <widget class="QWidget" name="card_4" native="true">
-      <widget class="QLabel" name="label_pic_4">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>121</width>
-         <height>160</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>430</y>
-     <width>781</width>
-     <height>42</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="3" alignment="Qt::AlignHCenter">
-     <widget class="QCheckBox" name="checkBox_4">
-      <property name="text">
-       <string>Select card 4</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0" alignment="Qt::AlignHCenter">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item alignment="Qt::AlignHCenter">
      <widget class="QCheckBox" name="checkBox">
       <property name="text">
        <string>Select card 1</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="1" alignment="Qt::AlignHCenter">
+    <item alignment="Qt::AlignHCenter">
      <widget class="QCheckBox" name="checkBox_2">
       <property name="text">
        <string>Select card 2</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="2" alignment="Qt::AlignHCenter">
+    <item alignment="Qt::AlignHCenter">
      <widget class="QCheckBox" name="checkBox_3">
       <property name="text">
        <string>Select card 3</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="4" alignment="Qt::AlignHCenter">
+    <item alignment="Qt::AlignHCenter">
+     <widget class="QCheckBox" name="checkBox_4">
+      <property name="text">
+       <string>Select card 4</string>
+      </property>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter">
      <widget class="QCheckBox" name="checkBox_5">
       <property name="text">
        <string>Select card 5</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="5" alignment="Qt::AlignHCenter">
+    <item alignment="Qt::AlignHCenter">
      <widget class="QCheckBox" name="checkBox_7">
       <property name="text">
        <string>Select card 6</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_pic_black">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>10</y>
+     <width>151</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>270</y>
+     <width>951</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="label_pic_1">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_pic_2">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_pic_3">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_pic_4">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_pic_5">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_pic_6">
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </item>

@@ -7,13 +7,15 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    cah w;
-    w.show();
-<<<<<<< HEAD
-    Client client;
-    std::cout << "kiscicák";
-=======
-    GameLogic gamelogic;
->>>>>>> master
+    /*cah w;
+    w.show();*/
+    GameGui game;
+    game.show();
+//<<<<<<< HEAD
+//    Client client;
+//    std::cout << "kiscicák";
+//=======
+//    GameLogic gamelogic;
+//>>>>>>> master
     return a.exec();
 }
