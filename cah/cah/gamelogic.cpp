@@ -1,25 +1,14 @@
-﻿#include "gamelogic.h"
+#include "gamelogic.h"
 
 
 GameLogic::GameLogic(QObject * parent) : QObject(parent)
 {
-  _cout = new QTextStream(stdout);
-  _cin = new QTextStream(stdin);
   _questions = readFile("Q-cards.txt");
   _answers = readFile("A-cards.txt");
   _activeAnswerCards.resize(6);
   
   selectQuestionCard();
   initializeAnswerCards();
-  
-  writeToConsole("The question is: " + _activeQuestionCard + "\n", _cout);
-  writeToConsole("The answers you can pick from:", _cout);
-  for (unsigned int i = 0; i < _activeAnswerCards.size(); ++i)
-  {
-    writeToConsole(_activeAnswerCards[i], _cout);
-  }
-  writeToConsole("\n", _cout);
-  run();
 }
 
 void GameLogic::selectQuestionCard()
@@ -39,22 +28,12 @@ void GameLogic::initializeAnswerCards()
   }
 }
 
-void GameLogic::run()
+void GameLogic::run(int index)
 {
-  writeToConsole("Select your pick: ", _cout);
-  QString index;
-  *_cin >> index;
-  bool ok;
-  pickAnswer(index.toInt(&ok, 10));
-  writeToConsole("Your picked answer is: " + _theAnswer + "\n", _cout);
-  removeCardFromHand(index.toInt(&ok, 10));
+  pickAnswer(index);
+  removeCardFromHand(index);
   refillHand();
-  writeToConsole("Refreshed cards in your hand:\n", _cout);
-  for (unsigned int i = 0; i < _activeAnswerCards.size(); ++i)
-  {
-    writeToConsole(_activeAnswerCards[i], _cout);
-  }
-  run();
+  selectQuestionCard();
 }
 
 void GameLogic::pickAnswer(int index)
@@ -74,8 +53,12 @@ void GameLogic::refillHand()
   _answers.remove(index);
 }
 
-GameLogic::~GameLogic()
+QString GameLogic::getQuestionCard()
 {
-  delete _cout;
-  delete _cin;
+  return _activeQuestionCard;
+}
+
+QVector<QString> GameLogic::getAnswerCards()
+{
+  return _activeAnswerCards;
 }

@@ -5,6 +5,7 @@
 #include <QtGui>
 #include <QLabel>
 #include "ui_gamegui.h"
+#include "gamelogic.h" 
 
 class GameGui : public QWidget
 {
@@ -16,12 +17,13 @@ public:
 
 private slots:
     void paintEvent(QPaintEvent *e);
+    //void showSubmitPage();
+    void render();
+    void onSubmitClicked();
 
 private:
     Ui::GameGui ui;
-    QVector<QWidget> m_Cards;
-    QVector<QWidget> m_CheckBox;
-    
+    GameLogic gamelogic;
 };
 
 #endif // GAMEGUI_H
