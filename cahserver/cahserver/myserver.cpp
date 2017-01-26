@@ -17,7 +17,7 @@ void MyServer::StartServer()
 		qDebug() << "listening...";
 	}
 }
-void MyServer::incommingConnection(int socketDescriptor)
+void MyServer::incomingConnection(qintptr socketDescriptor)
 {
 	qDebug() << socketDescriptor << " Connecting..";
 	MyThread *thread = new MyThread(socketDescriptor, this);

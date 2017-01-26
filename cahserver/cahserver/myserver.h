@@ -13,10 +13,9 @@ public:
 	explicit MyServer(QObject *parent = 0);
 	void StartServer();
 
-
 private:
 protected:
-	void incommingConnection(int socketDescriptor);
+	void incomingConnection(qintptr socketDescriptor);
 };
 
 #endif // MYSERVER_H

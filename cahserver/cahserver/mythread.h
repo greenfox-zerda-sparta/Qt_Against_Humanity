@@ -10,7 +10,7 @@ class MyThread : public QThread
 	Q_OBJECT
 
 public:
-	explicit MyThread(int ID, QObject *parent = 0);
+	explicit MyThread(qintptr ID, QObject *parent = 0);
 	void run();
 
 signals:
@@ -20,7 +20,7 @@ public slots :
 	void disconnected();
 private:
 	QTcpSocket* socket;
-	int socketDescriptor;
+	qintptr socketDescriptor;
 };
 
 #endif // MYTHREAD_H

@@ -2,7 +2,7 @@
 //#include <QtWidgets/QApplication>
 #include "myserver.h"
 
-#include <QCoreApplication>
+#include <QtCore/QCoreApplication>
 
 int main(int argc, char *argv[])
 {

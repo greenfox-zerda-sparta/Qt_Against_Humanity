@@ -1,9 +1,10 @@
 #include "mythread.h"
 
-MyThread::MyThread(int ID, QObject *parent)
-	: QThread(parent)
+MyThread::MyThread(qintptr ID, QObject *parent)
+	: QThread(parent),
+	socketDescriptor(ID)
 {
-	this->socketDescriptor = ID;
+
 }
 void MyThread::run() 
 {
