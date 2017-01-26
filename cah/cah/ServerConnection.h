@@ -1,9 +1,15 @@
 #pragma once
 #include <vector>
-class ServerConnection
+#include <QObject>
+#include <QTcpSocket>
+
+class ServerConnection: public QObject
 {
+  Q_OBJECT
+private:
+  QTcpSocket* socket;
 public:
-	ServerConnection();
+	ServerConnection(QObject *parent, QString host, quint16 port);
 	void sendSelectedCardIndex(int i);
 	void waitUntilGameIsReadyToStart();
 	bool pollIsPlayerInJudgeRole();

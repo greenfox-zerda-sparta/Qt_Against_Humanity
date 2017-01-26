@@ -2,8 +2,14 @@
 
 
 
-ServerConnection::ServerConnection()
+ServerConnection::ServerConnection(QObject *parent, QString host, quint16 port)
 {
+  socket = new QTcpSocket(this);
+  connect(socket, SIGNAL(readyRead()), SLOT(readTcpData()));
+  socket->connectToHost(host, port);
+  if (socket->waitForConnected()) {
+    socket->write("hallo");
+  }
 }
 
 void ServerConnection::sendSelectedCardIndex(int i)
