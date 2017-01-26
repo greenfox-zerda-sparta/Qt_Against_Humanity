@@ -116,6 +116,11 @@ void GameGui::onSubmitClicked()
   render();
 }
 
+//void GameGui::showSubmitPage()
+//{
+//  ui.stackedWidget->setCurrentWidget(ui.submitPage);
+//}
+
 void GameGui::paintEvent(QPaintEvent *e)
 {
   QPainter painter(this);

@@ -6,6 +6,7 @@
 #include <QLabel>
 #include "gamelogic.h"
 #include "ui_gamegui.h"
+#include "gamelogic.h" 
 
 class GameGui : public QWidget
 {
@@ -24,8 +25,15 @@ private:
     QVector<QWidget*> m_Cards;
     QVector<QWidget*> m_CheckBox;
     GameLogic gamelogic;
+
 private slots:
   void onSubmitClicked();
+    //void showSubmitPage();
+    void render();
+
+private:
+    Ui::GameGui ui;
+    GameLogic gamelogic;
 };
 
 #endif // GAMEGUI_H
