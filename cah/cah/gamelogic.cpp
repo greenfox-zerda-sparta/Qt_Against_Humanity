@@ -1,6 +1,5 @@
 ﻿#include "gamelogic.h"
-#include <QGlobal.h>
-#include <QTime>
+
 
 GameLogic::GameLogic(QObject * parent) : QObject(parent)
 {
@@ -9,6 +8,7 @@ GameLogic::GameLogic(QObject * parent) : QObject(parent)
   _questions = readFile("Q-cards.txt");
   _answers = readFile("A-cards.txt");
   _activeAnswerCards.resize(6);
+  
   selectQuestionCard();
   initializeAnswerCards();
   
@@ -24,18 +24,18 @@ GameLogic::GameLogic(QObject * parent) : QObject(parent)
 
 void GameLogic::selectQuestionCard()
 {
-  QTime time = QTime::currentTime();
-  qsrand((uint)time.msec());
-  _activeQuestionCard = _questions[qrand() % (_questions.size() - 1)];
+  int index = generateRandomNumber(_questions);
+  _activeQuestionCard = _questions[index];
+  _questions.remove(index);
 }
 
 void GameLogic::initializeAnswerCards()
 {
-  QTime time = QTime::currentTime();
-  qsrand((uint)time.msec());
   for (unsigned int i = 0; i < _activeAnswerCards.size(); ++i)
   {
-    _activeAnswerCards[i] = _answers[qrand() % (_answers.size() - 1)];
+    int index = generateRandomNumber(_answers);
+    _activeAnswerCards[i] = _answers[index];
+    _answers.remove(index);
   }
 }
 
@@ -69,12 +69,13 @@ void GameLogic::removeCardFromHand(int index)
 
 void GameLogic::refillHand()
 {
-  QTime time = QTime::currentTime();
-  qsrand((uint)time.msec());
-  _activeAnswerCards.push_back(_answers[qrand() % (_answers.size() - 1)]);
+  int index = generateRandomNumber(_answers);
+  _activeAnswerCards.push_back(_answers[index]);
+  _answers.remove(index);
 }
 
 GameLogic::~GameLogic()
 {
-	
+  delete _cout;
+  delete _cin;
 }

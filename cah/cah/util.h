@@ -9,3 +9,4 @@
 
 QVector<QString> readFile(QString);
 void writeToConsole(QString, QTextStream*);
+int generateRandomNumber(QVector<QString>&);
