@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>804</width>
-    <height>543</height>
+    <width>856</width>
+    <height>528</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,6 +22,19 @@
      <height>161</height>
     </rect>
    </property>
+   <widget class="QLabel" name="label_pic_black">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>131</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
@@ -36,7 +49,7 @@
     <string>SUBMIT</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -46,27 +59,113 @@
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QWidget" name="card_1" native="true"/>
+    <item row="0" column="4">
+     <widget class="QWidget" name="card_5" native="true">
+      <widget class="QLabel" name="label_pic_5">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>121</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QWidget" name="card_2" native="true"/>
+     <widget class="QWidget" name="card_2" native="true">
+      <widget class="QLabel" name="label_pic_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>121</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
     </item>
     <item row="0" column="2">
-     <widget class="QWidget" name="card_3" native="true"/>
+     <widget class="QWidget" name="card_3" native="true">
+      <widget class="QLabel" name="label_pic_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>121</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <zorder>label_pic_3</zorder>
+      <zorder>card_4</zorder>
+     </widget>
     </item>
-    <item row="0" column="3">
-     <widget class="QWidget" name="card_4" native="true"/>
-    </item>
-    <item row="0" column="4">
-     <widget class="QWidget" name="card_5" native="true"/>
+    <item row="0" column="0">
+     <widget class="QWidget" name="card_1" native="true">
+      <widget class="QLabel" name="label_pic_1">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>121</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
     </item>
     <item row="0" column="5">
-     <widget class="QWidget" name="card_6" native="true"/>
+     <widget class="QWidget" name="card_6" native="true">
+      <widget class="QLabel" name="label_pic_6">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>121</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QWidget" name="card_4" native="true">
+      <widget class="QLabel" name="label_pic_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>121</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
