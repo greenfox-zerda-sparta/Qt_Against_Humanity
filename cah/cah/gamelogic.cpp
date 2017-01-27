@@ -3,28 +3,23 @@
 
 GameLogic::GameLogic(QObject * parent) : QObject(parent)
 {
-  _questions = readFile("Q-cards.txt");
-  _answers = readFile("A-cards.txt");
-  _activeAnswerCards.resize(6);
-  
-  selectQuestionCard();
-  initializeAnswerCards();
+  initialize();
 }
 
 void GameLogic::selectQuestionCard()
 {
-  int index = generateRandomNumber(_questions);
-  _activeQuestionCard = _questions[index];
-  _questions.remove(index);
+  int index = generateRandomNumber(_questionDeck);
+  _activeQuestionCard = _questionDeck[index];
+  _questionDeck.remove(index);
 }
 
 void GameLogic::initializeAnswerCards()
 {
   for (unsigned int i = 0; i < _activeAnswerCards.size(); ++i)
   {
-    int index = generateRandomNumber(_answers);
-    _activeAnswerCards[i] = _answers[index];
-    _answers.remove(index);
+    int index = generateRandomNumber(_answerDeck);
+    _activeAnswerCards[i] = _answerDeck[index];
+    _answerDeck.remove(index);
   }
 }
 
@@ -48,9 +43,9 @@ void GameLogic::removeCardFromHand(int index)
 
 void GameLogic::refillHand()
 {
-  int index = generateRandomNumber(_answers);
-  _activeAnswerCards.push_back(_answers[index]);
-  _answers.remove(index);
+  int index = generateRandomNumber(_answerDeck);
+  _activeAnswerCards.push_back(_answerDeck[index]);
+  _answerDeck.remove(index);
 }
 
 QString GameLogic::getQuestionCard()
@@ -61,4 +56,33 @@ QString GameLogic::getQuestionCard()
 QVector<QString> GameLogic::getAnswerCards()
 {
   return _activeAnswerCards;
+}
+
+QVector<QString> GameLogic::getQuestionDeck()
+{
+  return _questionDeck;
+}
+
+QVector<QString> GameLogic::getAnswerDeck()
+{
+  return _answerDeck;
+}
+
+void GameLogic::initialize()
+{
+  _questionDeck = readFile("Q-cards.txt");
+  _answerDeck = readFile("A-cards.txt");
+  _activeAnswerCards.resize(6);
+  //selectQuestionCard();
+  //initializeAnswerCards();
+}
+
+void GameLogic::setQuestionCard(QString question)
+{
+  _activeQuestionCard = question;
+}
+
+void GameLogic::setAnswerCards(QVector<QString> answers)
+{
+  _activeAnswerCards = answers;
 }

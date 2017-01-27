@@ -5,7 +5,7 @@ GameGui::GameGui(QWidget *parent)
 {
   ui.setupUi(this);
   
-  render();
+  //render();
 
   connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(onSubmitClicked()));
 
@@ -17,9 +17,9 @@ GameGui::~GameGui()
 
 }
 
-void GameGui::render()
+void GameGui::render(GameLogic& logic)
 {
-  QVector<QString> answers = gamelogic.getAnswerCards();
+  QVector<QString> answers = logic.getAnswerCards();
   QPixmap pix_1("white_card.png");
   QPixmap pix_2("white_card.png");
   QPixmap pix_3("white_card.png");
@@ -63,7 +63,7 @@ void GameGui::render()
   painter_6->drawText(QRect(10, 10, 120, 131), answers[5]);
   ui.label_pic_6->setPixmap(pix_6);
 
-  QString question = gamelogic.getQuestionCard();
+  QString question = logic.getQuestionCard();
   QPixmap blackPix("black_card.png");
 
   QPainter* painter_7 = new QPainter(&blackPix);
@@ -85,30 +85,30 @@ void GameGui::onSubmitClicked()
 {
   if (ui.checkBox_1->isChecked())
   {
-    gamelogic.run(0);
+    //logic.run(0);
     ui.checkBox_1->setCheckState(Qt::Unchecked);
   } else if (ui.checkBox_2->isChecked())
   {
-    gamelogic.run(1);
+    //logic.run(1);
     ui.checkBox_2->setCheckState(Qt::Unchecked);
   } else if (ui.checkBox_3->isChecked())
   {
-    gamelogic.run(2);
+    //logic.run(2);
     ui.checkBox_3->setCheckState(Qt::Unchecked);
   } else if (ui.checkBox_4->isChecked())
   {
-    gamelogic.run(3);
+    //logic.run(3);
     ui.checkBox_4->setCheckState(Qt::Unchecked);
   } else if (ui.checkBox_5->isChecked())
   {
-    gamelogic.run(4);
+    //logic.run(4);
     ui.checkBox_5->setCheckState(Qt::Unchecked);
   } else if (ui.checkBox_6->isChecked())
   {
-    gamelogic.run(5);
+    //logic.run(5);
     ui.checkBox_6->setCheckState(Qt::Unchecked);
   }
-  render();
+  //render();
 }
 
 //void GameGui::showSubmitPage()

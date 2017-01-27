@@ -28,7 +28,7 @@ void Game::doRound() {
 	if (isPlayerInJudgeRole) {
 		this->selectedCards = serverConnection->pollSelectedCards();
 		uiAdapter->showSelectedCards(this->selectedCards);
-		this->winnerCard = uiAdapter->pollWinnerCard();
+		//this->winnerCard = uiAdapter->pollWinnerCard();
 		serverConnection->sendWinnerCard(this->winnerCard);
 	} else {
 		int selectedCardIndex = uiAdapter->pollSelectedCardIndex();

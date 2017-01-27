@@ -13,17 +13,19 @@ class GameGui : public QWidget
 
 public:
     GameGui(QWidget *parent = 0);
+    void render(GameLogic&);
+    Ui::GameGui ui;
     ~GameGui();
 
 private slots:
     void paintEvent(QPaintEvent *e);
     //void showSubmitPage();
-    void render();
+    
     void onSubmitClicked();
 
 private:
-    Ui::GameGui ui;
-    GameLogic gamelogic;
+    
+    ////GameLogic gamelogic;
 };
 
 #endif // GAMEGUI_H

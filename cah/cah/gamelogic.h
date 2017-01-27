@@ -13,12 +13,17 @@ public:
   void pickAnswer(int);
   void removeCardFromHand(int);
   void refillHand();
+  void initialize();
+  QVector<QString> getQuestionDeck();
+  QVector<QString> getAnswerDeck();
   QString getQuestionCard();
   QVector<QString> getAnswerCards();
+  void setQuestionCard(QString);
+  void setAnswerCards(QVector<QString>);
 
 private:
-  QVector<QString> _questions;
-  QVector<QString> _answers;
+  QVector<QString> _questionDeck;
+  QVector<QString> _answerDeck;
   QString _activeQuestionCard;
   QVector<QString> _activeAnswerCards;
   QString _theAnswer;

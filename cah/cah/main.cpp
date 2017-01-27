@@ -1,15 +1,12 @@
-#include "gamegui.h"
-#include "gamelogic.h"
 #include <QtWidgets/QApplication>
-#include <iostream>
+#include "UiAdapter.h"
 #include "Client.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     //Client client;
-    GameGui game;
-    game.show();
+    UiAdapter game;
     //Client client;
 
     return a.exec();
