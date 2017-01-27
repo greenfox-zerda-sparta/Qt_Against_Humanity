@@ -48,7 +48,7 @@ background-color: rgb(152, 200, 197);</string>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item alignment="Qt::AlignHCenter">
-     <widget class="QCheckBox" name="checkBox">
+     <widget class="QCheckBox" name="checkBox_1">
       <property name="text">
        <string>Select card 1</string>
       </property>
@@ -83,7 +83,7 @@ background-color: rgb(152, 200, 197);</string>
      </widget>
     </item>
     <item alignment="Qt::AlignHCenter">
-     <widget class="QCheckBox" name="checkBox_7">
+     <widget class="QCheckBox" name="checkBox_6">
       <property name="text">
        <string>Select card 6</string>
       </property>
@@ -161,86 +161,5 @@ background-color: rgb(152, 200, 197);</string>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections>
-  <connection>
-   <sender>checkBox</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>pushButton</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>81</x>
-     <y>541</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>426</x>
-     <y>575</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_2</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>pushButton</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>215</x>
-     <y>540</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>443</x>
-     <y>567</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_3</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>pushButton</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>390</x>
-     <y>542</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>468</x>
-     <y>565</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_4</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>pushButton</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>561</x>
-     <y>538</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>516</x>
-     <y>564</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_5</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>pushButton</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>715</x>
-     <y>538</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>537</x>
-     <y>577</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
