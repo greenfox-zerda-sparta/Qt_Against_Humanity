@@ -4,7 +4,6 @@
 #include <QWidget>
 #include <QtGui>
 #include <QLabel>
-#include "gamelogic.h"
 #include "ui_gamegui.h"
 #include "gamelogic.h" 
 
@@ -18,18 +17,9 @@ public:
 
 private slots:
     void paintEvent(QPaintEvent *e);
-    void render();
-
-private:
-    Ui::GameGui ui;
-    QVector<QWidget*> m_Cards;
-    QVector<QWidget*> m_CheckBox;
-    GameLogic gamelogic;
-
-private slots:
-  void onSubmitClicked();
     //void showSubmitPage();
     void render();
+    void onSubmitClicked();
 
 private:
     Ui::GameGui ui;
