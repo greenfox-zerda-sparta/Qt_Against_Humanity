@@ -1,0 +1,9 @@
+diff a/cah/cah/main.cpp b/cah/cah/main.cpp	(rejected hunks)
+@@ -9,6 +9,7 @@
+     QApplication a(argc, argv);
+     cah w;
+     w.show();
++<<<<<<< HEAD
+     Client client;
+     std::cout << "kiscic�k";
+ =======
