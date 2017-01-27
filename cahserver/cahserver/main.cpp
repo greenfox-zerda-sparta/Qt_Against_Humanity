@@ -1,13 +1,11 @@
-//#include "cahserver.h"
-//#include <QtWidgets/QApplication>
-#include "myserver.h"
-
 #include <QtCore/QCoreApplication>
+#include "chatserver.h"
 
-int main(int argc, char *argv[])
-{
-	QCoreApplication a(argc, argv);
-	MyServer server;
+int main(int argc, char **argv) {
+	QCoreApplication app(argc, argv);
+
+	ChatServer server;
 	server.StartServer();
-	return a.exec();
+
+	return app.exec();
 }
